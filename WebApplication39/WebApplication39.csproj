@@ -129,7 +129,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\FlightsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ToursController.cs" />
+    <Compile Include="Controllers\UserCruisesController.cs" />
     <Compile Include="Controllers\UserFlightsController.cs" />
+    <Compile Include="Controllers\UserQuotesController.cs" />
+    <Compile Include="Controllers\UserToursController.cs" />
     <Compile Include="Data\WebApplication39Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -142,9 +146,27 @@
     <Compile Include="Migrations\202106262007340_Demo.designer.cs">
       <DependentUpon>202106262007340_Demo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106271416009_dem2.cs" />
+    <Compile Include="Migrations\202106271416009_dem2.designer.cs">
+      <DependentUpon>202106271416009_dem2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106271425117_demo3.cs" />
+    <Compile Include="Migrations\202106271425117_demo3.designer.cs">
+      <DependentUpon>202106271425117_demo3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106280014159_demo4.cs" />
+    <Compile Include="Migrations\202106280014159_demo4.designer.cs">
+      <DependentUpon>202106280014159_demo4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Cruise.cs" />
     <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\quote.cs" />
+    <Compile Include="Models\Tour.cs" />
+    <Compile Include="Models\UserCruise.cs" />
     <Compile Include="Models\UserFlight.cs" />
+    <Compile Include="Models\UserQuote.cs" />
+    <Compile Include="Models\UserTour.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -152,23 +174,78 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\blog\b1.jpg" />
+    <Content Include="Content\images\blog\b2.jpg" />
+    <Content Include="Content\images\blog\b3.jpg" />
+    <Content Include="Content\images\client\testimonial1.jpg" />
+    <Content Include="Content\images\client\testimonial2.jpg" />
+    <Content Include="Content\images\gallary\g1.jpg" />
+    <Content Include="Content\images\gallary\g2.jpg" />
+    <Content Include="Content\images\gallary\g3.jpg" />
+    <Content Include="Content\images\gallary\g4.jpg" />
+    <Content Include="Content\images\gallary\g5.jpg" />
+    <Content Include="Content\images\gallary\g6.jpg" />
+    <Content Include="Content\images\home\banner.jpg" />
+    <Content Include="Content\images\home\fastive-image.jpg" />
+    <Content Include="Content\images\home\offer-timer.jpg" />
+    <Content Include="Content\images\home\subscribe-banner.jpg" />
+    <Content Include="Content\images\offer\offer-banner.jpg" />
+    <Content Include="Content\images\offer\offer-shape.png" />
+    <Content Include="Content\images\packages\p1.jpg" />
+    <Content Include="Content\images\packages\p2.jpg" />
+    <Content Include="Content\images\packages\p3.jpg" />
+    <Content Include="Content\images\packages\p4.jpg" />
+    <Content Include="Content\images\packages\p5.jpg" />
+    <Content Include="Content\images\packages\p6.jpg" />
+    <Content Include="Content\images\service\s1.jpg" />
+    <Content Include="Content\images\service\s1.png" />
+    <Content Include="Content\images\service\s2.png" />
+    <Content Include="Content\images\service\s3.png" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\animate.css" />
+    <Content Include="Scripts\bootsnav.css" />
+    <Content Include="Scripts\bootsnav.js" />
     <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.css" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\datepicker.css" />
+    <Content Include="Scripts\datepicker.js" />
+    <Content Include="Scripts\font-awesome.min.css" />
+    <Content Include="Scripts\hover-min.css" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.min.css" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.counterup.min.js" />
+    <Content Include="Scripts\jquery.filterizr.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.sticky.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\owl.carousel.min.css" />
+    <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\owl.theme.default.min.css" />
+    <Content Include="Scripts\responsive.css" />
+    <Content Include="Scripts\style.css" />
+    <Content Include="Scripts\waypoints.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -194,6 +271,32 @@
     <Content Include="Views\UserFlights\Edit.cshtml" />
     <Content Include="Views\UserFlights\Index.cshtml" />
     <Content Include="Views\UserFlights\FlightHome.cshtml" />
+    <Content Include="Views\Tours\Create.cshtml" />
+    <Content Include="Views\Tours\Delete.cshtml" />
+    <Content Include="Views\Tours\Details.cshtml" />
+    <Content Include="Views\Tours\Edit.cshtml" />
+    <Content Include="Views\Tours\Index.cshtml" />
+    <Content Include="Views\UserTours\Create.cshtml" />
+    <Content Include="Views\UserTours\Delete.cshtml" />
+    <Content Include="Views\UserTours\Details.cshtml" />
+    <Content Include="Views\UserTours\Edit.cshtml" />
+    <Content Include="Views\UserTours\Index.cshtml" />
+    <Content Include="Views\UserCruises\Create.cshtml" />
+    <Content Include="Views\UserCruises\Delete.cshtml" />
+    <Content Include="Views\UserCruises\Details.cshtml" />
+    <Content Include="Views\UserCruises\Edit.cshtml" />
+    <Content Include="Views\UserCruises\Index.cshtml" />
+    <Content Include="Views\UserQuotes\Create.cshtml" />
+    <Content Include="Views\UserQuotes\Delete.cshtml" />
+    <Content Include="Views\UserQuotes\Details.cshtml" />
+    <Content Include="Views\UserQuotes\Edit.cshtml" />
+    <Content Include="Views\UserQuotes\Index.cshtml" />
+    <Content Include="Views\UserTours\UshakaBooking.cshtml" />
+    <Content Include="Views\UserTours\GoodHopeBooking.cshtml" />
+    <Content Include="Views\UserTours\ApartheidBooking.cshtml" />
+    <Content Include="Views\UserTours\GoldReefBooking.cshtml" />
+    <Content Include="Views\UserTours\DNSBooking.cshtml" />
+    <Content Include="Views\UserFlights\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -217,6 +320,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106262007340_Demo.resx">
       <DependentUpon>202106262007340_Demo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106271416009_dem2.resx">
+      <DependentUpon>202106271416009_dem2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106271425117_demo3.resx">
+      <DependentUpon>202106271425117_demo3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106280014159_demo4.resx">
+      <DependentUpon>202106280014159_demo4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

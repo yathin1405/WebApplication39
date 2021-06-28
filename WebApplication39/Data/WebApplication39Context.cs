@@ -22,5 +22,13 @@ namespace WebApplication39.Data
         public System.Data.Entity.DbSet<WebApplication39.Models.Flight> Flights { get; set; }
 
         public System.Data.Entity.DbSet<WebApplication39.Models.UserFlight> UserFlights { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication39.Models.Tour> Tours { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication39.Models.UserTour> UserTours { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication39.Models.UserCruise> UserCruises { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication39.Models.UserQuote> UserQuotes { get; set; }
     }
 }

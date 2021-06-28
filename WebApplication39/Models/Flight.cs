@@ -69,13 +69,13 @@ namespace WebApplication39.Models
         [Display(Name = "Return Flight")]
         public bool Return_Flight { get; set; }
 
-        [Display(Name = "Return Date")]
-        [DataType(DataType.Date)]
-        public DateTime Return_Date { get; set; }
+        //[Display(Name = "Return Date")]
+        //[DataType(DataType.Date)]
+        //public DateTime Return_Date { get; set; }
 
-        [Display(Name = "Return Time")]
-        [DataType(DataType.Time)]
-        public DateTime Return_Time { get; set; } 
+        //[Display(Name = "Return Time")]
+        //[DataType(DataType.Time)]
+        //public DateTime Return_Time { get; set; } 
         //[Display(Name = "Plane Name")]
         //public string Plane_Name { get; set; }
 
@@ -88,18 +88,18 @@ namespace WebApplication39.Models
         public string Flight_Delay { get; set; }
 
         
-        [Display(Name = "Plane Capacity")]
-        public string Plane_Capacity { get; set; }
-       
-     
+        //[Display(Name = "Plane Capacity")]
+        //public string Plane_Capacity { get; set; }
 
+        [Display(Name = "Price")]
+        public float Price { get; set; }
         //[Display(Name = "Ticket Price")]
         //[Required(ErrorMessage = "Price Required")]
         //public float Price { get; set; }
 
-       
 
-        
+
+
         public enum SeatAvail
         {
             Available,

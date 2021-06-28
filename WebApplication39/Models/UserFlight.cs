@@ -38,6 +38,7 @@ namespace WebApplication39.Models
             CapeTown_International,
 
         }
+     
         public Class SeatType { get; set; }
         public enum Class
         {
@@ -67,6 +68,7 @@ namespace WebApplication39.Models
 
         [Display(Name = "Return Flight")]
         public bool Return_Flight { get; set; }
+        
 
         [Display(Name = "Return Date")]
         [DataType(DataType.Date)]
@@ -75,253 +77,273 @@ namespace WebApplication39.Models
         [Display(Name = "Return Time")]
         [DataType(DataType.Time)]
         public DateTime Return_Time { get; set; }
+        public double Seat_Type_Calc { get; set; }
+        public double SeatTypeCalc()
+        {
+            double x = 0;
+            if (SeatType == Class.First)
+            {
+                x = user.Price * 0.30;
+            }
 
-            public double Airline_Fee { get; set; }
+            else if (SeatType == Class.Business)
+            {
+                x = user.Price * 0.20;
+            }
+            else
+            {
+                x = 0;
+            }
+            return x;
+        }
+
         
-      
+
+
+        public double Airline_Fee { get; set; }
         public double AirlineFee()
         {
             double x = 0;
 
             if (Airways == Airline.Mango && FROM == From.CapeTown_International && TO == To.King_Shaka_International)
             {
-                x = 500;
+                x = user.Price + SeatTypeCalc();
 
             }
-            if (Airways == Airline.Mango && FROM == From.CapeTown_International && TO == To.Lanseria)
+            else if (Airways == Airline.Mango && FROM == From.CapeTown_International && TO == To.Lanseria)
             {
-                x = 550;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.CapeTown_International && TO == To.OR_Tambo)
             {
-                x = 600;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.King_Shaka_International && TO == To.CapeTown_International)
             {
-                x = 650;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.King_Shaka_International && TO == To.Lanseria)
             {
-                x = 700;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.King_Shaka_International && TO == To.OR_Tambo)
             {
-                x = 750;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.Lanseria && TO == To.King_Shaka_International)
             {
-                x = 800;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.Lanseria && TO == To.CapeTown_International)
             {
-                x = 850;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.Lanseria && TO == To.OR_Tambo)
             {
-                x = 900;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.OR_Tambo && TO == To.King_Shaka_International)
             {
-                x = 1000;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.OR_Tambo && TO == To.CapeTown_International)
             {
-                x = 1050;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Mango && FROM == From.OR_Tambo && TO == To.Lanseria)
             {
-                x = 200;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.CapeTown_International && TO == To.King_Shaka_International)
             {
-                x = 500;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.CapeTown_International && TO == To.Lanseria)
             {
-                x = 550;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.CapeTown_International && TO == To.OR_Tambo)
             {
-                x = 600;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.King_Shaka_International && TO == To.CapeTown_International)
             {
-                x = 650;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.King_Shaka_International && TO == To.Lanseria)
             {
-                x = 700;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.King_Shaka_International && TO == To.OR_Tambo)
             {
-                x = 750;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.Lanseria && TO == To.King_Shaka_International)
             {
-                x = 800;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.Lanseria && TO == To.CapeTown_International)
             {
-                x = 850;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.Lanseria && TO == To.OR_Tambo)
             {
-                x = 900;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.OR_Tambo && TO == To.King_Shaka_International)
             {
-                x = 1000;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.OR_Tambo && TO == To.CapeTown_International)
             {
-                x = 1050;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.British_Airways && FROM == From.OR_Tambo && TO == To.Lanseria)
             {
-                x = 200;
+                x = user.Price + SeatTypeCalc();
 
             }
 
             if (Airways == Airline.Kulula && FROM == From.CapeTown_International && TO == To.King_Shaka_International)
             {
-                x = 500;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.CapeTown_International && TO == To.Lanseria)
             {
-                x = 550;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.CapeTown_International && TO == To.OR_Tambo)
             {
-                x = 600;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.King_Shaka_International && TO == To.CapeTown_International)
             {
-                x = 650;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.King_Shaka_International && TO == To.Lanseria)
             {
-                x = 700;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.King_Shaka_International && TO == To.OR_Tambo)
             {
-                x = 750;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.Lanseria && TO == To.King_Shaka_International)
             {
-                x = 800;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.Lanseria && TO == To.CapeTown_International)
             {
-                x = 850;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.Lanseria && TO == To.OR_Tambo)
             {
-                x = 900;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.OR_Tambo && TO == To.King_Shaka_International)
             {
-                x = 1000;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.OR_Tambo && TO == To.CapeTown_International)
             {
-                x = 1050;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.Kulula && FROM == From.OR_Tambo && TO == To.Lanseria)
             {
-                x = 200;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.CapeTown_International && TO == To.King_Shaka_International)
             {
-                x = 500;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.CapeTown_International && TO == To.Lanseria)
             {
-                x = 550;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.CapeTown_International && TO == To.OR_Tambo)
             {
-                x = 600;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.King_Shaka_International && TO == To.CapeTown_International)
             {
-                x = 650;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.King_Shaka_International && TO == To.Lanseria)
             {
-                x = 700;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.King_Shaka_International && TO == To.OR_Tambo)
             {
-                x = 750;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.Lanseria && TO == To.King_Shaka_International)
             {
-                x = 800;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.Lanseria && TO == To.CapeTown_International)
             {
-                x = 850;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.Lanseria && TO == To.OR_Tambo)
             {
-                x = 900;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.OR_Tambo && TO == To.King_Shaka_International)
             {
-                x = 1000;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.OR_Tambo && TO == To.CapeTown_International)
             {
-                x = 1050;
+                x = user.Price + SeatTypeCalc();
 
             }
             if (Airways == Airline.SAA && FROM == From.OR_Tambo && TO == To.Lanseria)
             {
-                x = 200;
+                x = user.Price + SeatTypeCalc();
 
             }
             return x;

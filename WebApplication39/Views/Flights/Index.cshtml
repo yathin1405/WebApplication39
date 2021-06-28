@@ -35,9 +35,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Return_Flight)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Return_Date)
-        </th>
+        </th>*@
         @*<th>
             @Html.DisplayNameFor(model => model.Return_Time)
         </th>*@
@@ -50,9 +50,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Flight_Delay)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Plane_Capacity)
-        </th>
+        </th>*@
         <th></th>
     </tr>
 
@@ -82,9 +82,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Return_Flight)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Return_Date)
-        </td>
+        </td>*@
         @*<td>
             @Html.DisplayFor(modelItem => item.Return_Time)
         </td>*@
@@ -97,9 +97,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.Flight_Delay)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Plane_Capacity)
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.FlightID }) |
             @Html.ActionLink("Details", "Details", new { id=item.FlightID }) |

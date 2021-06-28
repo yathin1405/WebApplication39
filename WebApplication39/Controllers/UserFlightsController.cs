@@ -21,7 +21,13 @@ namespace WebApplication39.Controllers
 
             return View(db.UserFlights.ToList());
         }
-      
+
+        public ActionResult Invoice()
+        {
+
+            return View();
+        }
+
 
         // GET: UserFlights/Details/5
         public ActionResult Details(int? id)
@@ -53,10 +59,14 @@ namespace WebApplication39.Controllers
         {
             if (ModelState.IsValid)
             {
-               
+                userFlight.Airline_Fee = userFlight.AirlineFee();
+                userFlight.passenger_Cost = userFlight.passengerCost();
+                userFlight.Ticket_Price = userFlight.ReturnTicketPrice();
+                userFlight.Seat_Type_Calc = userFlight.SeatTypeCalc();
+
                 db.UserFlights.Add(userFlight);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Invoice");
             }
 
             return View(userFlight);
